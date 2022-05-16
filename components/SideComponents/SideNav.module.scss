@@ -1,0 +1,18 @@
+.container{
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 50vw;
+    background-color: rgb(63, 63, 142);
+    height: 100%;
+    z-index:3;
+    transform: 2s;
+
+    a{
+        display: block;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    
+}

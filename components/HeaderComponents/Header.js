@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
-import LogoImage from '../../public/Logo.png'
+// import LogoImage from '../../public/Logo.png'
 import NavIcon from './NavIcon'
 import SideNav from '../SideComponents/SideNav'
 import Link from 'next/link'
@@ -16,6 +16,7 @@ const Header = ({Headstyler}) => {
     setOpen(!open);
   }
   const [open, setOpen] = useState(true);
+  // const LogoImage = "/logo.png"
   
   return (
 
@@ -28,7 +29,7 @@ const Header = ({Headstyler}) => {
                 <Link href='/'>
                   
                   <Logo 
-                    imgUrl={LogoImage}
+                    imgUrl='/logo.png'
                     imgClass="h-8 w-8 mr-2" 
                     aClass="flex items-center py-4 px-2" 
                     altText="Company Logo" 
