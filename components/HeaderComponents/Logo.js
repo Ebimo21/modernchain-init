@@ -1,18 +1,19 @@
 import React from 'react'
 
-const Logo = ({imgUrl, width, height, altText, brandName}) => {
+const Logo = ({imgUrl, imgClass, aClass, width, height, altText, brandName}) => {
   return (
-    <div>
+    <a className={aClass}>
         <img 
             alt={altText} 
             src={imgUrl} 
             width={width} 
             height={height}
+            className={imgClass}
         />
 
         <span>{brandName}</span>
 
-    </div>
+    </a>
   )
 }
 
