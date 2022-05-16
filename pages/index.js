@@ -1,5 +1,4 @@
 import Meta from '../components/Meta'
-// import styles from '../styles/Style.module.scss'
 
 export default function Home() {
   return (

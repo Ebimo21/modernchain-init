@@ -5,7 +5,6 @@ import NavIcon from './NavIcon'
 import SideNav from '../SideComponents/SideNav'
 import Link from 'next/link'
 import { useState } from 'react'
-// import HeadStyle from '../../styles/style.module.scss'
 import { faCoffee, faCartShopping, faUser, faBars, faArrowsTurnToDots, faCar } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -45,8 +44,8 @@ const Header = ({Headstyler}) => {
 
               <div className='flex basis-20 items-center justify-around' >
                 
-              <NavIcon className={Headstyler.icon} icon={faUser}></NavIcon>
-              <NavIcon className={Headstyler.icon} icon={faCartShopping}></NavIcon>
+              <NavIcon  icon={faUser}></NavIcon>
+              <NavIcon  icon={faCartShopping}></NavIcon>
               <NavIcon calling={toggleMobileMenu} id="btns" className="md:hidden" icon={faBars} ></NavIcon>
               </div>
             </div>
