@@ -17,7 +17,7 @@ const Header = ({Headstyler}) => {
   const [open, setOpen] = useState(true);
   
   return (
-    
+
     <>
       <div className='bg-white shadow-lg'>
         <div className="max-w-6xl mx-auto px-4">
@@ -54,37 +54,37 @@ const Header = ({Headstyler}) => {
       </div>
 
       <div id='btn'  className={`mobile-menu transition-all absolute ${open ? "w-0 hidden" : "w-48 "} top-0 bg-blue-900 h-full  `}>
-          <ul class="text-white px-5">
+          <ul className="text-white px-5">
             <li>
               <Link href="/">
-                <a onClick={toggleMobileMenu} class="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Home</a>
+                <a onClick={toggleMobileMenu} className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Home</a>
               </Link>
             </li>
-            <li class="">
+            <li>
               <Link href="/about">
-                <a onClick={toggleMobileMenu} id='get' class="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">About</a>
+                <a onClick={toggleMobileMenu} id='get' className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">About</a>
               </Link>
             </li>
 
             <li>
               <Link href="/">
-                <a onClick={toggleMobileMenu} class="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Services</a>
+                <a onClick={toggleMobileMenu} className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Services</a>
               </Link>
             </li>
-            <li class="">
+            <li>
               <Link href="/about">
-                <a onClick={toggleMobileMenu} id='get' class="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Contact</a>
+                <a onClick={toggleMobileMenu} id='get' className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Contact</a>
               </Link>
             </li>
 
             <li>
               <Link href="/">
-                <a onClick={toggleMobileMenu} class="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Shop</a>
+                <a onClick={toggleMobileMenu} className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Shop</a>
               </Link>
             </li>
-            <li class="">
+            <li>
               <Link href="/about">
-                <a onClick={toggleMobileMenu} id='get' class="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">FAQ</a>
+                <a onClick={toggleMobileMenu} id='get' className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">FAQ</a>
               </Link>
             </li>
             
