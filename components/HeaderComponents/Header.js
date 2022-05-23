@@ -1,14 +1,20 @@
 import React from 'react'
 import Logo from './Logo'
+
 // import LogoImage from '../../public/Logo.png'
 import NavIcon from './NavIcon'
 import SideNav from '../SideComponents/SideNav'
 import Link from 'next/link'
 import { useState } from 'react'
+import {useRouter} from 'next/router'
 import { faCoffee, faCartShopping, faUser, faBars, faArrowsTurnToDots, faCar } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = ({Headstyler}) => {
+
+  const route = useRouter();
+  const path = route.pathname;
+  // console.log(path);
   
   const toggleMobileMenu = () =>{
     const menu = document.getElementById('btn');
@@ -54,43 +60,19 @@ const Header = ({Headstyler}) => {
           
       </div>
 
-      <div id='btn'  className={`mobile-menu transition-all absolute ${open ? "w-0 hidden" : "w-48 "} top-0 bg-blue-900 h-full  `}>
-          <ul className="text-white px-5">
-            <li>
-              <Link href="/">
-                <a onClick={toggleMobileMenu} className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a onClick={toggleMobileMenu} id='get' className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">About</a>
-              </Link>
-            </li>
+      <SideNav 
+        Link = {Link}
+        toggleMobileMenu = {toggleMobileMenu}
+        path={path}
+        open={open}
+      >
+      </SideNav>
 
-            <li>
-              <Link href="/">
-                <a onClick={toggleMobileMenu} className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Services</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a onClick={toggleMobileMenu} id='get' className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Contact</a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/">
-                <a onClick={toggleMobileMenu} className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">Shop</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a onClick={toggleMobileMenu} id='get' className="my-5 block text-sm px-2 py-4  hover:bg-green-500 font-semibold">FAQ</a>
-              </Link>
-            </li>
-            
-          </ul>
+      <div className="overlay">
+        
       </div>
+
+
     </>
     
   )

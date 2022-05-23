@@ -1,6 +1,7 @@
 import React from 'react'
 import Meta from '../components/Meta'
 import Link from 'next/link'
+import { PrismaClient } from '@prisma/client'
 
 const about = ({users}) => {
   return (
@@ -15,8 +16,10 @@ const about = ({users}) => {
       <ul>
         {users.map((user) =>(
           <li key={user.id}>
-            <p>{user.name}</p>
-            <p>{user.username}</p>
+            <h1 className='text-3xl'>{user.name}</h1>
+            <p><a href={`mailto:${user.email}`}>{user.email}</a></p>
+            <h3 className='text-xl'><i>{user.username}</i></h3>
+            <p><strong>{user.usernamexx}</strong></p>
             <a href={"https://www."+user.website}>{user.website}</a>
           </li>
 
@@ -29,7 +32,9 @@ const about = ({users}) => {
 }
 
 export const getStaticProps = async() =>{
+    // const prisma = new PrismaClient
     const res = await fetch('http://jsonplaceholder.typicode.com/users')
+    // const users = await prisma.user.findMany()
     const users = await res.json();
 
     return{
