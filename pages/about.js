@@ -31,11 +31,11 @@ const about = ({users}) => {
   )
 }
 
-export const getStaticProps = async() =>{
-    // const prisma = new PrismaClient
-    const res = await fetch('http://jsonplaceholder.typicode.com/users')
-    // const users = await prisma.user.findMany()
-    const users = await res.json();
+export const getServerSideProps = async() =>{
+    const prisma = new PrismaClient
+    // const res = await fetch('http://jsonplaceholder.typicode.com/users')
+    const users = await prisma.user.findMany()
+    // const users = await res.json();
 
     return{
         props: {
