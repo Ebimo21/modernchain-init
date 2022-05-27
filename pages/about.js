@@ -36,7 +36,7 @@ export const getServerSideProps = async() =>{
     // const res = await fetch('http://jsonplaceholder.typicode.com/users')
     const users = await prisma.user.findMany()
     // const users = await res.json();
-
+console.log('kd')
     return{
         props: {
             users,
